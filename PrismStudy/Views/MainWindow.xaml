@@ -1,0 +1,24 @@
+﻿<Window x:Class="PrismStudy.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PrismStudy"
+        
+        xmlns:core="clr-namespace:PrismStudy.Core;assembly=PrismStudy.Core"
+        xmlns:prism="http://prismlibrary.com/"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+
+        mc:Ignorable="d"
+        Title="MainWindow" Height="1080" Width="1920" ResizeMode="NoResize" WindowState="{Binding WindowState}" >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <ContentControl Grid.Row="0" prism:RegionManager.RegionName="{x:Static core:RegionNames.TitleBarRegion}"/>
+        <ContentControl Grid.Row="1" prism:RegionManager.RegionName="{x:Static core:RegionNames.MenuRegion}"/>
+    </Grid>
+</Window>

@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="PrismStudy.Modules.TitleBar.Views.TitleBar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PrismStudy.Modules.TitleBar.Views"
+             xmlns:prism="http://prismlibrary.com/"
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             mc:Ignorable="d" 
+             d:DesignHeight="100" d:DesignWidth="800" Background="AliceBlue">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <!-- 로고 -->
+        <Grid>
+            
+        </Grid>
+        
+        <!-- 타이틀 -->
+        <Grid Grid.Column="1">
+            <Label Content="테스트 프로그램"/>
+        </Grid>
+        
+        <!-- 버튼 -->
+        <Grid Grid.Column="2">
+            <StackPanel Orientation="Horizontal">
+                <Button Command="{Binding WindowMinimum}">최소화</Button>
+                <Button>종료</Button>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</UserControl>
